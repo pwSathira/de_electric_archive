@@ -1,0 +1,20 @@
+.MainContainer{
+    text-align: left;
+    margin-left: 12%;
+}
+
+.Heading1{
+
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.TextContainer{
+    margin-right: 50%;
+}
