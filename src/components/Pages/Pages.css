@@ -1,20 +1,58 @@
-.MainContainer{
-    text-align: left;
-    margin-left: 12%;
+.MainContainer {
+    margin-top: 5%;
+    position: relative;  /* Set to relative to position other elements inside it */
+    width: 100%;
+    min-height: 100vh;   /* Ensure it occupies the full height of the viewport */
+    background-color: white;
+    /*overflow: visible;*/
 }
 
-.Heading1{
+.AboutContainer {
+    position: absolute;  /* Position it absolutely to fill the entire MainContainer */
+    top: -5%;
+    left: -5%;
+    right: -5%;
+    bottom: -3%;
 
+    background-image: url('../AboutImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Adding the blur effect */
+    filter: blur(5px) contrast(60%);   /* Adjust the blur value as needed */
 }
 
-.underline {
+.TextContainer {
+    position: relative; /* Ensure it's above the AboutContainer */
+    z-index: 1;         /* Any positive z-index ensures it's above the AboutContainer */
+
+    max-width: 800px;
+    margin: 0 auto;     /* Centering the content */
+    padding: 20px;
+    color: white;
+    /*text-shadow: 1px 1px 8px black;*/
+    font-size: 30px;
+}
+
+.Heading1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure it's above the AboutContainer */
+}
+
+.MSContainer {
+    position: relative;
+    text-align: center;
+    color: white;
     text-decoration: underline;
+    z-index: 1;
 }
 
 .italic {
     font-style: italic;
 }
 
-.TextContainer{
-    margin-right: 50%;
+.underline{
+    font-weight: bold;
 }

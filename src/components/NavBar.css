@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 20;
 }
@@ -28,6 +29,8 @@
     text-decoration: none;
     font-size: 2rem;
     flex-grow: 1;
+    /*max-width: 100%;*/
+    /*margin-right: 58.6%;*/
 }
 
 .nav-menu {
@@ -88,7 +91,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        border-top: 1pxsolid #fff;
+        border-top: 1px solid #fff;
         position: absolute;
         top: 80px;
         left: -110%;

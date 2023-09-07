@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import logo from './DPELogo50.png';
+import logo from './DPELogoALT1080.png';
 
 
 function NavBar() {
@@ -14,7 +14,6 @@ function NavBar() {
                 <div className="nav-container">
                     <NavLink exact to="/" className="nav-logo">
                         <img src={logo} alt="Dnipro Electrics Logo" className="logo-img" />
-                        Dnipro Electrics Inc.
                         <i className="fas fa-code"></i>
                     </NavLink>
 
