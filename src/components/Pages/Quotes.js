@@ -14,7 +14,7 @@ export const Quotes = () => {
         <div className='MainContainer'>
             <h1 className="Heading2">Request a Quote</h1>
             <div className='QuotesContainer'>
-                <form className='FormClass'>
+                <form className='FormClass' netlify>
                     <div>
                         <input className="qInput" type="text" id="name" name="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)}/>
                     </div>
