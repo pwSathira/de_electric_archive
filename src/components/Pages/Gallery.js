@@ -19,20 +19,21 @@ export const Gallery = () => {
     };
 
     return (
-        <div className="MainContainer">
-            <div className="GalleryContainer">
-                {images.map((image, index) => (
-                    <img
-                        key={index}
-                        className="mySlides"
-                        src={image}
-                        alt="Slide"
-                        style={{ display: index === currentSlide ? "block" : "none" }}
-                    />
-                ))}
-            </div>
-            <button className="w3-button w3-display-left" onClick={prevSlide}>&#10094;</button>
-            <button className="w3-button w3-display-right" onClick={nextSlide}>&#10095;</button>
+        <body>
+        <div className="GalleryContainer">
+            {images.map((image, index) => (
+                <img
+                    key={index}
+                    className="mySlides"
+                    src={image}
+                    alt="Slide"
+                    style={{ display: index === currentSlide ? "block" : "none" }}
+                />
+            ))}
         </div>
+        <button className="w3-button w3-display-left" onClick={prevSlide}>&#10094;</button>
+        <button className="w3-button w3-display-right" onClick={nextSlide}>&#10095;</button>
+        </body>
+
     );
 };
