@@ -6,25 +6,11 @@ export const Quotes = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log(name, email, message);
-    }
-
     return (
         <div className='MainContainer'>
             <h1 className="Heading2">Request a Quote</h1>
             <div className='QuotesContainer'>
-
-                {/* This is the hidden pure HTML form for Netlify */}
-                <form name="quoteForm" data-netlify="true" netlify-honeypot="bot-field" hidden>
-                    <input type="text" name="name" />
-                    <input type="email" name="email" />
-                    <textarea name="message"></textarea>
-                </form>
-
-                {/* This is the React form for users */}
-                <form className='FormClass' method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                <form className='FormClass' method="POST" action="https://formspree.io/f/meqbrbyq">
                     <div>
                         <input className="qInput" type="text" id="name" name="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
                     </div>
