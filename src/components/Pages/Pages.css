@@ -5,7 +5,30 @@
     min-height: 100vh;   /* Ensure it occupies the full height of the viewport */
     background-color: white;
     text-align: center;
+    overflow-x: hidden;
     /*overflow: visible;*/
+}
+
+.MainContainerALT {
+    margin-top: 5%;
+    position: relative;  /* Set to relative to position other elements inside it */
+    width: 100%;
+    min-height: 100vh;   /* Ensure it occupies the full height of the viewport */
+    background-color: white;
+    text-align: center;
+    display: flex;
+    overflow-x: hidden;
+    /*overflow: visible;*/
+}
+
+.HomeContainer {
+    position: relative;
+    background-color: white;
+    margin-top: 320px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /*padding-bottom: 550px;*/
 }
 
 .AboutContainer {
@@ -190,3 +213,62 @@
 .w3-display-right {
     right: 0;
 }
+
+.Hero-Image{
+    position: absolute;  /* Position it absolutely to fill the entire MainContainer */
+    top: -5%;
+    left: -5%;
+    right: -5%;
+    height: 40%;
+    scale: 100%;
+    background-image: url('../HomeImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Adding the blur effect */
+    filter: blur(0px) contrast(70%);
+}
+
+.Hero-Text {
+    margin: 50px;
+}
+
+.Heading3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: xxx-large;
+    z-index: 1; /* Ensure it's above the AboutContainer */
+}
+
+.Heading4 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+    font-style: italic;
+    top: -30px;
+    z-index: 1; /* Ensure it's above the AboutContainer */
+}
+
+
+.col{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: #112432;
+}
+.col:nth-child(2){
+    background-color: #4d1635;
+
+}
+
+.DPE_CS {
+   image: url('HomeImages/DPE_Commercial.png');
+    background-color: red;
+}
+
+.DPE_IS {
+
+}
+
