@@ -1,39 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Pages.css';
 import DPE1 from './GalleryImages/DPE1.jpg';
 import DPE2 from './GalleryImages/DPE2.jpg';
 import DPE3 from './GalleryImages/DPE3.jpg';
 import DPE4 from './GalleryImages/DPE4.jpg';
+import DPE5 from './GalleryImages/DPE5.jpg';
 
 export const Gallery = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-    const images = [DPE1, DPE2, DPE3, DPE4];
-
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % images.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    };
 
     return (
-        <body>
         <div className="GalleryContainer">
-            {images.map((image, index) => (
-                <img
-                    key={index}
-                    className="mySlides"
-                    src={image}
-                    alt="Slide"
-                    style={{ display: index === currentSlide ? "block" : "none" }}
-                />
-            ))}
+            <div className="imageWrapper imageWrapper-0">
+                <img className="gridImage" src={DPE1} alt="Slide 1" />
+            </div>
+            <div className="imageWrapper imageWrapper-1">
+                <img className="gridImage" src={DPE2} alt="Slide 2" />
+            </div>
+            <div className="imageWrapper imageWrapper-2">
+                <img className="gridImage" src={DPE3} alt="Slide 3" />
+            </div>
+            <div className="imageWrapper imageWrapper-3">
+                <img className="gridImage" src={DPE4} alt="Slide 4" />
+            </div>
+            <div className="imageWrapper imageWrapper-4">
+                <img className="gridImage" src={DPE5} alt="Slide 5" />
+            </div>
         </div>
-        <button className="w3-button w3-display-left" onClick={prevSlide}>&#10094;</button>
-        <button className="w3-button w3-display-right" onClick={nextSlide}>&#10095;</button>
-        </body>
 
     );
 };

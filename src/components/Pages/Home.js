@@ -19,16 +19,17 @@ export const Home = () => {
                         <button className="qButton" onClick={handleButtonClick}>Get Quoted</button>
                     </div>
                 </div>
-
             </div>
             <div className="HomeContainer">
-                <div className="col">
-                    {/*<h1 className="Heading1">1</h1>*/}
-                    {/*<div className="DPE_CS"></div>*/}
+                <div className="col residential">
+                    <h2 className="MSContainer">Residential Services</h2>
+                    <p>From elegant lighting solutions to energy-efficient setups, our residential services cater to the unique needs of every home. Whether it's new installations, upgrades, or emergency repairs, our team ensures safety and satisfaction at every step.</p>
+                    <button className="qButton">Learn More</button>
                 </div>
-                <div className="col">
-                    {/*<h1 className="Heading1">2</h1>*/}
-                    <img src="  HomeImages/DPE_Commercial.png" alt="Commercial"></img>
+                <div className="col commercial">
+                    <h2 className="MSContainer">Commercial Services</h2>
+                    <p>Our commercial electrical solutions power businesses of all scales. From small retail spaces to sprawling office complexes, we ensure timely services, minimizing downtime and maximizing productivity. Partner with us for a bright business future.</p>
+                    <button className="qButton">Learn More</button>
                 </div>
             </div>
         </div>

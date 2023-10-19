@@ -1,24 +1,15 @@
-.MainContainer {
+.MainContainer, .MainContainerALT {
     margin-top: 5%;
-    position: relative;  /* Set to relative to position other elements inside it */
+    position: relative;
     width: 100%;
-    min-height: 100vh;   /* Ensure it occupies the full height of the viewport */
+    min-height: 100vh;
     background-color: white;
     text-align: center;
-    overflow-x: hidden;
-    /*overflow: visible;*/
+    overflow: hidden;
 }
 
 .MainContainerALT {
-    margin-top: 5%;
-    position: relative;  /* Set to relative to position other elements inside it */
-    width: 100%;
-    min-height: 100vh;   /* Ensure it occupies the full height of the viewport */
-    background-color: white;
-    text-align: center;
     display: flex;
-    overflow-x: hidden;
-    /*overflow: visible;*/
 }
 
 .HomeContainer {
@@ -28,59 +19,51 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    /*padding-bottom: 550px;*/
 }
 
 .AboutContainer {
-    position: absolute;  /* Position it absolutely to fill the entire MainContainer */
+    position: absolute;
     top: -5%;
     left: -5%;
     right: -5%;
     bottom: -3%;
-
+    overflow-x: hidden;
     background-image: url('../AboutImg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Adding the blur effect */
-    filter: blur(5px) contrast(60%);   /* Adjust the blur value as needed */
+    filter: blur(5px) contrast(60%);
+}
+
+.TextContainer, .Heading1, .Heading2, .MSContainer {
+    position: relative;
+    z-index: 1;
 }
 
 .TextContainer {
-    position: relative; /* Ensure it's above the AboutContainer */
-    z-index: 1;         /* Any positive z-index ensures it's above the AboutContainer */
-
     max-width: 800px;
-    margin: 0 auto;     /* Centering the content */
+    margin: 0 auto;
     padding: 20px;
     color: white;
-    /*text-shadow: 1px 1px 8px black;*/
     font-size: 30px;
 }
 
-.Heading1 {
-    position: relative;
+.Heading1, .Heading3 {
     text-align: center;
     color: white;
-    z-index: 1; /* Ensure it's above the AboutContainer */
 }
 
 .Heading2 {
-    position: relative;
     text-align: left;
     margin-left: 12%;
     padding-top: 2%;
     color: black;
-    z-index: 1; /* Ensure it's above the AboutContainer */
 }
 
-
 .MSContainer {
-    position: relative;
     text-align: center;
     color: white;
     text-decoration: underline;
-    z-index: 1;
 }
 
 .italic {
@@ -92,86 +75,81 @@
 }
 
 .GalleryContainer {
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
     width: 100%;
-    margin: auto;
-    padding-bottom: -12%;
-    overflow: hidden; /* Hide images out of bounds */
-    /*border: 2px solid #ccc; !* Optional: Add a border *!*/
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gridImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imageWrapper {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.imageWrapper-0, .imageWrapper-1 {
+    grid-row: span 3;
+    grid-column: span 3;
+}
+
+.imageWrapper-2, .imageWrapper-3, .imageWrapper-4 {
+    grid-row: span 2;
+    grid-column: span 2;
 }
 
 .QuotesContainer {
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 12%;
     position: relative;
     width: 100%;
     margin: auto;
-    overflow: hidden; /* Hide images out of bounds */
+    overflow: hidden;
     text-align: left;
-    /*border: 2px solid #ccc; !* Optional: Add a border *!*/
 }
 
-.FormClass {
-}
-
-.qMessage{
-    display: inline-block;
-    margin-top: 30px;
-    text-align: left;
-    height: 200px;
-    resize: none;
+.qMessage, .qInput {
     padding: 12px 20px;
+    margin-top: 30px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 16px;
+}
+
+.qMessage {
+    text-align: left;
+    height: 200px;
+    resize: none;
     width: 50%;
-
 }
-
-.qInput{
-    padding: 12px 20px;
-    margin-top: 30px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 40px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-}
-
 
 .qButton {
     margin-top: 30px;
     align-items: center;
-    background-clip: padding-box;
     background-color: #fa6400;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    display: inline-flex;
     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    min-height: 3rem;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
 }
 
-.qButton:hover,
-.qButton:focus {
+.qButton:hover, .qButton:focus {
     background-color: #fb8332;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -187,12 +165,11 @@
 }
 
 .mySlides {
-
-    text-align: center;
-    display: none; /* Hide images by default */
-    width: 100%;
-    height: 100%;
-    object-fit: contain ;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: none;
+    margin: auto;
 }
 
 .w3-button {
@@ -204,6 +181,7 @@
     padding: 16px;
     font-size: 24px;
     border: none;
+    cursor: pointer;
 }
 
 .w3-display-left {
@@ -214,31 +192,21 @@
     right: 0;
 }
 
-.Hero-Image{
-    position: absolute;  /* Position it absolutely to fill the entire MainContainer */
+.Hero-Image {
+    position: absolute;
     top: -5%;
     left: -5%;
     right: -5%;
     height: 40%;
-    scale: 100%;
     background-image: url('../HomeImg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Adding the blur effect */
     filter: blur(0px) contrast(70%);
 }
 
 .Hero-Text {
     margin: 50px;
-}
-
-.Heading3 {
-    position: relative;
-    text-align: center;
-    color: white;
-    font-size: xxx-large;
-    z-index: 1; /* Ensure it's above the AboutContainer */
 }
 
 .Heading4 {
@@ -248,27 +216,38 @@
     font-size: x-large;
     font-style: italic;
     top: -30px;
-    z-index: 1; /* Ensure it's above the AboutContainer */
 }
 
-
-.col{
+.col {
     color: white;
     height: 100%;
     width: 100%;
     background-color: #112432;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.col:nth-child(2){
+
+.col:nth-child(2) {
     background-color: #4d1635;
-
 }
 
-.DPE_CS {
-   image: url('HomeImages/DPE_Commercial.png');
-    background-color: red;
+.residential {
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
 }
 
-.DPE_IS {
-
+.commercial {
+    background: linear-gradient(135deg, #f6b93b, #e58e26);
 }
 
+.col h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.col p {
+    margin: 0 15px 20px 15px;
+    font-size: 18px;
+    line-height: 1.4;
+}
