@@ -29,8 +29,6 @@
     text-decoration: none;
     font-size: 2rem;
     flex-grow: 1;
-    /*max-width: 100%;*/
-    /*margin-right: 58.6%;*/
 }
 
 .nav-menu {
@@ -47,6 +45,7 @@
     height: 100%;
     border-bottom: 3px solid transparent;
 }
+
 .fa-code {
     margin-left: 1rem;
 }
@@ -77,39 +76,50 @@
 
 .nav-icon {
     display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    z-index: 3;
 }
 
 .logo-img {
-    width: 75px; /* Adjust width as needed */
-    height: auto; /* This maintains the aspect ratio */
-    margin-right: 20px; /* Increase the spacing between the logo and the text */
-    vertical-align: middle; /* align the logo with the text */
+    width: 75px;
+    height: auto;
+    margin-right: 20px;
+    vertical-align: middle;
 }
 
 @media screen and (max-width: 960px) {
     .nav-menu {
-        display: flex;
+        display: none; /* Initially hidden */
         flex-direction: column;
         width: 100%;
         border-top: 1px solid #fff;
         position: absolute;
-        top: 80px;
-        left: -110%;
-        opacity: 1;
-        transition: all 0.5s ease;
+        top: 55px;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        background: #023047;
+        z-index: 2;
     }
 
     .nav-menu.active {
-        background: #1f5156;
-        left: 0px;
+        display: flex;
         opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
+        transition: opacity 0.5s ease;
+        z-index: 2;
     }
+
     .nav-item .active {
-        color: #1f5156;
+        color: white;
         border: none;
     }
+
     .nav-links {
         padding: 1.5rem;
         width: 100%;
@@ -118,16 +128,6 @@
 
     .nav-icon {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #ffdd40;
     }
-
-
-
-
 }
+

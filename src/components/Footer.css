@@ -4,15 +4,14 @@
     height: 130px;
     position: relative;
     display: flex;
-    justify-content: center;  /* horizontally center content */
-    align-items: center;      /* vertically center content */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    color: #fff;              /* white text color for better readability on dark background */
+    color: #fff;
 }
 
 .footer-content {
     text-align: center;
-    max-width: 200%;  /* optional max-width to restrict content width */
+    max-width: 200%;
 }
 
-/* Add any additional styles for links, icons, or other footer elements here */

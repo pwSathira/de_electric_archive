@@ -8,15 +8,19 @@ function NavBar() {
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+
     return (
         <>
             <nav className="navbar">
                 <div className="nav-container">
-                    <NavLink exact to="/" className="nav-logo">
+                    <NavLink exact to="/" className="nav-logo" onClick={closeMobileMenu}>
                         <img src={logo} alt="Dnipro Electrics Logo" className="logo-img" />
-                        <i className="fas fa-code"></i>
                     </NavLink>
 
+                    <div className="nav-icon" onClick={handleClick}>
+                        <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+                    </div>
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
@@ -64,9 +68,6 @@ function NavBar() {
                             </NavLink>
                         </li>
                     </ul>
-                    <div className="nav-icon" onClick={handleClick}>
-                        <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-                    </div>
                 </div>
             </nav>
         </>
